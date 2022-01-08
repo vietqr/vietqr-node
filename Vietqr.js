@@ -1,31 +1,4 @@
 import { getData, postData } from "./config.js";
-export class Vietqr {
-    constructor(accountNo = '', accountName = '', acqId = '', addInfo = '', amount = '', template = '',) {
-        this.accountNo = accountNo;
-        this.accountName = accountName;
-        this.acqId = acqId;
-        this.addInfo = addInfo;
-        this.amount = amount;
-        this.template = template;
-    }
-    async generateQRBase64() {
-        postData('https://api.vietqr.io/v2/generate', {
-            accountNo: this.accountNo,
-            accountName: this.accountName,
-            acqId: this.acqId,
-            addInfo: this.addInfo,
-            amount: this.amount,
-            template: this.template,
-        })
-    }
-    async getTemplate() {
-        getData('https://api.vietqr.io/v2/template')
-    }
-    async getBanks() {
-        getData('https://api.vietqr.io/v2/banks')
-    }
-
-}
 export class VietQRClient {
     #x_api_key = '';
     #x_client_key = '';

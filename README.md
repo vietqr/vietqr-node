@@ -1,7 +1,8 @@
 # vietqr
-![image](https://user-images.githubusercontent.com/66076345/148222520-fb931593-d24f-4500-a71f-b106f61778f3.png)
+![image](https://user-images.githubusercontent.com/94815095/148626516-6ae4f1ee-a736-40a7-b6b0-257daa35a00c.png)
 
-Made by CASSO
+- Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
+- Support create link URL from QR code
 
 ## Table of Contents
 
@@ -17,12 +18,12 @@ Made by CASSO
 ## Installing
 Using npm :
 ```bash
-  npm i draw-vietqr
+  npm i vietqr
 ```
 ## Example
 
 ```javascript
-import {VietQRClient} from 'draw-vietqr';
+import {VietQRClient} from 'vietqr';
 
 
 let VietQR = new VietQRClient({
