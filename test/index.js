@@ -1,6 +1,6 @@
-import { VietQRClient } from '../index.js';
+import { VietQR } from '../index.js';
 // let h = new Vietqr('113366668888', 'QUY VAC XIN PHONG CHONG COVID', '970415', 'Ung Ho Quy Vac Xin', '79000', 'compact');
-let VietQR = new VietQRClient({
+let VietQR = new VietQR({
     x_api_key: '1',
     x_client_key: '1',
 })

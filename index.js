@@ -1,8 +1,6 @@
-import fetch from "node-fetch";
-import { VietQRClient } from "./Vietqr.js";
+import { VietQR } from "./vietqr.js";
 
 "use strict";
 export  {
-    
-    VietQRClient
+    VietQR
 };

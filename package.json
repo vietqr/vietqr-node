@@ -1,32 +1,27 @@
 {
   "name": "vietqr",
   "version": "1.0.1",
-  "description": "npm vietqr",
+  "description": "Support draw QR code from data bank ( accountName, amount, memo,....) with many templates, create link URL from QR code",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js",
-    "build": "node_modules/webpack/bin/webpack.js --mode production --progress --hide-modules"
+    "dev": "node index.js"
   },
   "bin": {
     "vietqr": "commands/draw-vietqr.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hieunt0303/draw-vietqr.git"
+    "url": "https://github.com/vietqr/vietqr-node.git"
   },
-  "author": "hieunt0303",
-  "license": "ISC",
+  "author": "Casso",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hieunt0303/draw-vietqr/issues"
+    "url": "https://github.com/vietqr/vietqr-node/issues"
   },
-  "homepage": "https://github.com/hieunt0303/draw-vietqr#readme",
-  "devDependencies": {
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1"
-  },
+  "homepage": "https://github.com/vietqr/vietqr-node",
+  "devDependencies": {},
   "dependencies": {
     "axios": "^0.24.0"
   }
