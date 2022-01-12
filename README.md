@@ -77,10 +77,13 @@ let qrCode = await VietQR.genQRCodeSync({
 
 | Option | Description | 
 | --- | --- |
-| bank | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [Api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
-| **text** | Y |
-| **width** | N |
-| **height** | N |
+| **bank** | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [Api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
+| **accountName** | Bank account name |
+| **accountNumber** | Bank account number |
+| **amount** | Amount of money |
+| **memo** | Money transfer content |
+| **template** | Type of template returned to the user |
+
 
 ### getTemplate()
 ```javascript
