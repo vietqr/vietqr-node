@@ -120,8 +120,8 @@ let quickLink = VietQR.genQuickLink({
         accountNumber: '113366668888',
         amount: '79000',
         memo: 'Ung Ho Quy Vac Xin',
-        template: 'compact', //option
-        media: '.jpg' //option
+        template: 'compact', 
+        media: '.jpg' 
     })
 ```
 
@@ -133,7 +133,7 @@ let qrCode = await VietQR.genQRCodeSyncV1({
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-    format : 'qr_only' //option
+    format : 'qr_only'
 })
 ```
 #### Response successful
@@ -144,7 +144,7 @@ let qrCode = await VietQR.genQRCodeSyncV1({
     "data": {
         "acqId": "970415",
         "accountName": "QUY VAC XIN PHONG CHONG COVID",
-        "qrDataURL": "data:image/png;base64,QRCODE_BASE_64_HERE"
+        "qrDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAADeCAYAAAA..."
     }
 }
 ```
