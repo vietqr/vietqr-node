@@ -178,8 +178,7 @@ let qrCode = await VietQR.genQRCodeSync({
     }
 }
 ```
-- Copy field qrDataURL paste on browser to looking image QR :
-![image](https://user-images.githubusercontent.com/66076345/147755844-fccb1738-eb75-4e23-bc6f-d4fc2a9c78e2.png)
+
 
 ## License
 MIT License
