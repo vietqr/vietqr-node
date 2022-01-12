@@ -83,6 +83,8 @@ let qrCode = await VietQR.genQRCodeSync({
 | **amount** | Amount of money |
 | **memo** | Money transfer content |
 | **template** | Type of template returned to the user |
+| **x_api_key** | Api_key is provided when registering an account at http://my.vietqr.io/|
+| **x_client_key** | Client_key is provided when registering an account at http://my.vietqr.io/ |
 
 
 ### getTemplate()
