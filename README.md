@@ -51,13 +51,13 @@ import {VietQRClient} from 'vietqr';
 let VietQR = new VietQRClient({
     x_api_key: '1',
     x_client_key: '1',
-})
+});
 
 // list banks are supported create QR code by Vietqr
-let banks = await VietQR.getBanks()
+let banks = await VietQR.getBanks();
 
 // list templates are supported by Vietqr
-let templates = await VietQR.getTemplate()
+let templates = await VietQR.getTemplate();
 
 
 // create QR code from data
@@ -67,13 +67,13 @@ let qrCode = await VietQR.genQRCodeSync({
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-})
+});
 
 ```
 ## Vietqr API
 ### getTemplate()
 ```javascript
-let templates = await VietQR.getTemplate()
+let templates = await VietQR.getTemplate();
 ```
 #### Response successful
 ```javascript
@@ -102,7 +102,7 @@ let templates = await VietQR.getTemplate()
 
 ### getBanks()
 ```javascript
-let banks = await VietQR.getBanks()
+let banks = await VietQR.getBanks();
 ```
 #### Response successful
 ```javascript
@@ -136,19 +136,19 @@ let quickLink = VietQR.genQuickLink({
         memo: 'Ung Ho Quy Vac Xin',
         template: 'compact', 
         media: '.jpg' 
-    })
+    });
 ```
 
 ### genQRCodeSync()
 ```javascript
-let qrCode = await VietQR.genQRCodeSyncV1({
+let qrCode = await VietQR.genQRCodeSync({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
     format : 'qr_only'
-})
+});
 ```
 #### Response successful
 ```javascript
