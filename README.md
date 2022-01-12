@@ -10,7 +10,7 @@
   - [Choose what you need](#choose-what-you-need)
   - [Try It!](#try-it)
   - [Demo preview](#demo-preview)
-  - [Installing](#installing)
+  - [Installation](#installing)
   - [Example](#example)
   - [Vietqr API](#vietqr-api)
 
@@ -31,11 +31,16 @@
 
 ![Demo preview](https://res.cloudinary.com/taskmanagereaglob123/image/upload/v1641971750/photo_2022-01-12_14.15.13_ozxy6g.jpg)
 
-## Installing
-Using npm :
-```bash
-  npm i vietqr
-```
+## Installation
+- Download install
+
+    [https://github.com/vietqr/vietqr-node](https://github.com/vietqr/vietqr-node)
+
+- Npm install
+
+	```BASH
+	npm install vietqr
+	```
 ## Example
 
 ```javascript
