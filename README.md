@@ -71,11 +71,13 @@ let qrCode = await VietQR.genQRCodeSync({
 });
 
 ```
+
+
 ## Vietqr API
 
 | Option | Description | 
 | --- | --- |
-| Basic options| --- |
+| bank | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [Api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang) |
 | **text** | Y |
 | **width** | N |
 | **height** | N |
