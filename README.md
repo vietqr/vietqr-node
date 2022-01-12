@@ -72,6 +72,14 @@ let qrCode = await VietQR.genQRCodeSync({
 
 ```
 ## Vietqr API
+
+| Option | Required | Type | Defaults | Description | Compatibility |
+| --- | --- |--- | --- |--- | --- |
+| Basic options| --- | ---|---|---|---|
+| **text** | Y | String |`''` |  Text | &nbsp; |
+| **width** | N | Number | `256` |  Width |  &nbsp; |
+| **height** | N | Number | `256` |  Height |  &nbsp; |
+
 ### getTemplate()
 ```javascript
 let templates = await VietQR.getTemplate();
