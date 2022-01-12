@@ -1,5 +1,5 @@
 # VIETQR
-![image](https://user-images.githubusercontent.com/94815095/148626516-6ae4f1ee-a736-40a7-b6b0-257daa35a00c.png)
+![image](https://vietqr.net/img/VietQR.46a78cbb.png)
 
 - Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
 - Support create link URL from QR code
