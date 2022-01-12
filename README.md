@@ -7,6 +7,7 @@
 ## Table of Contents
 
   - [Features](#features)
+  - [Choose what you need](#choose-what-you-need)
   - [Installing](#installing)
   - [Example](#example)
   - [Vietqr API](#vietqr-api)
@@ -14,6 +15,14 @@
 ## Features
 - Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
 - Support create link URL from QR code
+
+## Choose what you need
+
+| Project | Support |
+| --- | --- |
+| [EasyQRCodeJS](https://github.com/ushelp/EasyQRCodeJS) | **Running with DOM on CLIENT-SIDE .** Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.), Electron, NW.js, ETC.  |
+| [EasyQRCodeJS-NodeJS](https://github.com/ushelp/EasyQRCodeJS-NodeJS) | **Running without DOM on SERVER-SIDE**. Save image to file(PNG/JPEG/SVG) or get data url text.  NodeJS, Electron, NW.js, ETC.|
+| [EasyQRCode-React-Native](https://github.com/ushelp/EasyQRCode-React-Native) | **A QRCode generator for React Native**. Generate QRCode image or get base64 data url text.|
 
 ## Installing
 Using npm :
