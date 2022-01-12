@@ -38,17 +38,8 @@ let banks = await VietQR.getBanks()
 let templates = await VietQR.getTemplate()
 
 
-// create QR code from data v1
-let qrCode = await VietQR.genQRCodeSyncV1({
-    bank: '970415',
-    accountName: 'QUY VAC XIN PHONG CHONG COVID',
-    accountNumber: '113366668888',
-    amount: '79000',
-    memo: 'Ung Ho Quy Vac Xin',
-})
-
-// create QR code from data v2
-let qrCode = await VietQR.genQRCodeSyncV2({
+// create QR code from data
+let qrCode = await VietQR.genQRCodeSync({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
