@@ -147,7 +147,7 @@ let qrCode = await VietQR.genQRCodeSync({
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-    format : 'qr_only'
+    template : 'qr_only'
 });
 ```
 #### Response successful
