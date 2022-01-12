@@ -62,7 +62,7 @@ let qrCode = await VietQR.genQRCodeSyncV2({
 ```javascript
 let templates = await VietQR.getTemplate()
 ```
-#### JSON res
+#### Response successful
 ```javascript
  {
   code: '00',
@@ -91,7 +91,7 @@ let templates = await VietQR.getTemplate()
 ```javascript
 let banks = await VietQR.getBanks()
 ```
-#### JSON res
+#### Response successful
 ```javascript
 {
   code: '00',
@@ -125,7 +125,7 @@ let quickLink = VietQR.genQuickLink({
     })
 ```
 
-### genQRCodeSyncV1() / genQRCodeSyncV2()
+### genQRCodeSync()
 ```javascript
 let qrCode = await VietQR.genQRCodeSyncV1({
     bank: '970415',
@@ -135,16 +135,8 @@ let qrCode = await VietQR.genQRCodeSyncV1({
     memo: 'Ung Ho Quy Vac Xin',
     format : 'qr_only' //option
 })
-let qrCode = await VietQR.genQRCodeSyncV2({
-    bank: '970415',
-    accountName: 'QUY VAC XIN PHONG CHONG COVID',
-    accountNumber: '113366668888',
-    amount: '79000',
-    memo: 'Ung Ho Quy Vac Xin',
-    template : 'qr_only' // option
-})
 ```
-#### JSON res
+#### Response successful
 ```javascript
 {
     "code": "00",
