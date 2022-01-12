@@ -120,7 +120,8 @@ let banks = await VietQR.getBanks()
       logo: 'https://api.vietqr.io/img/ICB.3d4d6760.png',
       support: 3
     },
-    ...........
+    ....
+  ]
 }
 ```
 
