@@ -13,6 +13,7 @@
   - [Installation](#installing)
   - [Example](#example)
   - [Vietqr API](#vietqr-api)
+  - [License](#license)
 
 ## Features
 - Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
@@ -162,3 +163,6 @@ let qrCode = await VietQR.genQRCodeSyncV1({
 ```
 - Copy field qrDataURL paste on browser to looking image QR :
 ![image](https://user-images.githubusercontent.com/66076345/147755844-fccb1738-eb75-4e23-bc6f-d4fc2a9c78e2.png)
+
+## License
+MIT License
