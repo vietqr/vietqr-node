@@ -5,7 +5,7 @@ module.exports = {
     entry: resolve(__dirname, 'src/index.js'),
     output: {
         path: resolve(__dirname, 'dist'),
-        filename: 'draw-vietqr.js',
+        filename: 'vietqr.js',
         library: 'vietqr'
     },
     plugins: [
