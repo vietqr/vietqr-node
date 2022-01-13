@@ -86,9 +86,9 @@ export class VietQR {
     }) {
         if (this.#checkKey()) {
             let url = media == '.jpg' ?
-                encodeURI(`${this.#api_url}/${bank}/${accountNumber}/${amount}/${(memo)}/${template}.jpg?accountName=${accountName}`)
+                encodeURI(`${this.#api_url}/${bank}/${accountNumber}/${amount}/${(memo)}/${template}.jpg?accountName=${accountName}`).replace(/%20/g, "+")
                 :
-                encodeURI(`${this.#api_url}/${bank}/${accountNumber}/${amount}/${memo}/${template}.png?accountName=${accountName}`);
+                encodeURI(`${this.#api_url}/${bank}/${accountNumber}/${amount}/${memo}/${template}.png?accountName=${accountName}`).replace(/%20/g, "+");
             return url
         }
         this.#sendMessage(this.#checkKey())
