@@ -9,7 +9,7 @@
     "dev": "node index.js"
   },
   "bin": {
-    "vietqr": "commands/draw-vietqr.js"
+    "vietqr": "commands/vietqr.js"
   },
   "repository": {
     "type": "git",
