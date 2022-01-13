@@ -23,7 +23,7 @@
 
 | Project | Support |
 | --- | --- |
-| [VietQR](https://github.com/vietqr/vietqr-node) | Running with DOM on CLIENT-SIDE: Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.), Electron, NW.js, ETC. Running without DOM on SERVER-SIDE: Save image to file(PNG/JPEG/Base64) or get data url text.  NodeJS, Electron, NW.js, ETC. A QRCode generator for React Native: Generate QRCode image or get base64 data url text.|
+| [VietQR](https://github.com/vietqr/vietqr-node) | <br/>Running with DOM on CLIENT-SIDE: Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.), Electron, NW.js, ETC. <br/>Running without DOM on SERVER-SIDE: Save image to file(PNG/JPEG/Base64) or get data url text.  NodeJS, Electron, NW.js, ETC. A QRCode generator for React Native: Generate QRCode image or get base64 data url text.|
 ## Try It!
 
 [Try It!](http://my.vietqr.io/ "Easy To Try It!")
