@@ -1,4 +1,4 @@
-import { VietQR } from '../index.js';
+let { VietQR } = require('../index.js');
 
 let vietQR = new VietQR({
     x_api_key: 'b9f13b6a-3779-4e2b-807f-2731cc623785',

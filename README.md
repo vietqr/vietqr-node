@@ -45,7 +45,7 @@
 ## Example
 
 ```javascript
-import {VietQRClient} from 'vietqr';
+import {VietQR} from 'vietqr';
 
 
 let VietQR = new VietQRClient({
