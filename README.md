@@ -49,26 +49,29 @@ import {VietQR} from 'vietqr';
 
 
 let VietQR = new VietQRClient({
-    x_api_key: 'de8a0804-a76d-41e5-8ad6-31503ce7d5f4',
-    x_client_key: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
+    clientID: 'de8a0804-a76d-41e5-8ad6-31503ce7d5f4',
+    clientSecret: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
 });
 
 // list banks are supported create QR code by Vietqr
-let banks = await VietQR.getBanks();
+VietQR.getBanks().then((banks)=>{console.log(banks)})
+.catch((err)=>{});
 
 // list templates are supported by Vietqr
-let templates = await VietQR.getTemplate();
+VietQR.getTemplate().then((data)=>{console.log(data)})
+.catch((err)=>{});
 
 
 // create QR code from data
-let qrCode = await VietQR.genQRCodeBase64({
+VietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
     template: 'vietqr_net_2'
-});
+}).then((data)=>{console.log(data)})
+.catch((err)=>{});
 
 ```
 
@@ -83,12 +86,13 @@ let qrCode = await VietQR.genQRCodeBase64({
 | **amount** | Amount of money |
 | **memo** | Money transfer content |
 | **template** | Type of template returned to the user |
-| **x_api_key** | api_key is provided when registering an account at http://my.vietqr.io/ 
-| **x_client_key** | client_key is provided when registering an account at http://my.vietqr.io/ 
+| **clientID** | api_key is provided when registering an account at http://my.vietqr.io/ 
+| **clientSecret** | client_key is provided when registering an account at http://my.vietqr.io/ 
 
 ### getTemplate()
 ```javascript
-let templates = await VietQR.getTemplate();
+VietQR.getTemplate().then((data)=>{console.log(data)})
+.catch((err)=>{});
 ```
 #### Response successfully
 ```javascript
@@ -117,7 +121,8 @@ let templates = await VietQR.getTemplate();
 
 ### getBanks()
 ```javascript
-let banks = await VietQR.getBanks();
+VietQR.getBanks().then((data)=>{console.log(data)})
+.catch((err)=>{});
 ```
 #### Response successfully
 ```javascript
@@ -143,7 +148,7 @@ let banks = await VietQR.getBanks();
 
 ### genQuickLink()
 ```javascript
-let quickLink = VietQR.genQuickLink({
+VietQR.genQuickLink({
         bank: '970415',
         accountName: 'QUY VAC XIN PHONG CHONG COVID',
         accountNumber: '113366668888',
@@ -151,19 +156,21 @@ let quickLink = VietQR.genQuickLink({
         memo: 'Ung Ho Quy Vac Xin',
         template: 'compact', 
         media: '.jpg' 
-    });
+    }).then((data)=>{console.log(data)})
+.catch((err)=>{});
 ```
 
 ### genQRCodeBase64()
 ```javascript
-let qrCode = await VietQR.genQRCodeBase64({
+VietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
     template : 'qr_only'
-});
+}).then((data)=>{console.log(data)})
+.catch((err)=>{});
 ```
 #### Response successfully
 ```javascript

@@ -1,19 +1,18 @@
 let axios = require("axios");
 class VietQR {
-    #x_api_key = '';
-    #x_client_key = '';
+    #clientID = '';
+    #clientSecret = '';
     #message = 'Please check your API key and client key';
     #api_url = 'https://api.vietqr.io';
     constructor({
-
-        x_api_key = '',
-        x_client_key = '',
+        clientID = '',
+        clientSecret = '',
     }) {
-        this.#x_api_key = x_api_key;
-        this.#x_client_key = x_client_key;
+        this.#clientID = clientID;
+        this.#clientSecret = clientSecret;
     }
     #checkKey() {
-        if (this.#x_api_key == '' || this.#x_client_key == '') {
+        if (this.#clientID == '' || this.#clientSecret == '') {
             return false
         }
         return true
