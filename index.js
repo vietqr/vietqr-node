@@ -1,4 +1,4 @@
-import axios from "axios";
+let axios = require("axios");
 class VietQR {
     #x_api_key = '';
     #x_client_key = '';
@@ -35,7 +35,7 @@ class VietQR {
         }
         this.#sendMessage(this.#checkKey())
     }
-    async genQRCodeSync({
+    async genQRCodeBase64({
         bank = '',
         accountName = '',
         accountNumber = '',
@@ -55,7 +55,7 @@ class VietQR {
         }
         this.#sendMessage(this.#checkKey())
     }
-    async genQRCodeSyncV1({
+    async genQRCodeBase64V1({
         bank = '',
         accountName = '',
         accountNumber = '',
