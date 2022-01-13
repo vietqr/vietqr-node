@@ -16,7 +16,7 @@
     "url": "https://github.com/vietqr/vietqr-node.git"
   },
   "author": "Casso",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/vietqr/vietqr-node/issues"
   },
