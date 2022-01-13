@@ -1,6 +1,6 @@
 {
   "name": "vietqr",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Support draw QR code from data bank ( accountName, amount, memo,....) with many templates, create link URL from QR code",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,10 @@
     "url": "https://github.com/vietqr/vietqr-node.git"
   },
   "keywords": [
-    "Vietqr","Napas", "Casso", "Template"
+    "Vietqr",
+    "Napas",
+    "Casso",
+    "Template"
   ],
   "author": "Casso",
   "license": "ISC",
