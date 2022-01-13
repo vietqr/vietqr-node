@@ -61,7 +61,7 @@ let templates = await VietQR.getTemplate();
 
 
 // create QR code from data
-let qrCode = await VietQR.genQRCodeSync({
+let qrCode = await VietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
@@ -154,9 +154,9 @@ let quickLink = VietQR.genQuickLink({
     });
 ```
 
-### genQRCodeSync()
+### genQRCodeBase64()
 ```javascript
-let qrCode = await VietQR.genQRCodeSync({
+let qrCode = await VietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
