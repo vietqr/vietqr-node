@@ -48,22 +48,22 @@
 import {VietQR} from 'vietqr';
 
 
-let VietQR = new VietQRClient({
+let vietQR = new VietQR({
     clientID: 'de8a0804-a76d-41e5-8ad6-31503ce7d5f4',
     clientSecret: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
 });
 
 // list banks are supported create QR code by Vietqr
-VietQR.getBanks().then((banks)=>{console.log(banks)})
+vietQR.getBanks().then((banks)=>{console.log(banks)})
 .catch((err)=>{});
 
 // list templates are supported by Vietqr
-VietQR.getTemplate().then((data)=>{console.log(data)})
+vietQR.getTemplate().then((data)=>{console.log(data)})
 .catch((err)=>{});
 
 
 // create QR code from data
-VietQR.genQRCodeBase64({
+vietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
@@ -91,7 +91,7 @@ VietQR.genQRCodeBase64({
 
 ### getTemplate()
 ```javascript
-VietQR.getTemplate().then((data)=>{console.log(data)})
+vietQR.getTemplate().then((data)=>{console.log(data)})
 .catch((err)=>{});
 ```
 #### Response successfully
@@ -121,7 +121,7 @@ VietQR.getTemplate().then((data)=>{console.log(data)})
 
 ### getBanks()
 ```javascript
-VietQR.getBanks().then((data)=>{console.log(data)})
+vietQR.getBanks().then((data)=>{console.log(data)})
 .catch((err)=>{});
 ```
 #### Response successfully
@@ -148,7 +148,7 @@ VietQR.getBanks().then((data)=>{console.log(data)})
 
 ### genQuickLink()
 ```javascript
-VietQR.genQuickLink({
+vietQR.genQuickLink({
         bank: '970415',
         accountName: 'QUY VAC XIN PHONG CHONG COVID',
         accountNumber: '113366668888',
@@ -162,7 +162,7 @@ VietQR.genQuickLink({
 
 ### genQRCodeBase64()
 ```javascript
-VietQR.genQRCodeBase64({
+vietQR.genQRCodeBase64({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
