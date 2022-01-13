@@ -1,5 +1,5 @@
 # VIETQR
-![image](https://user-images.githubusercontent.com/94815095/148626516-6ae4f1ee-a736-40a7-b6b0-257daa35a00c.png)
+![](https://res.cloudinary.com/taskmanagereaglob123/image/upload/v1641970995/VietQR.46a78cbb_utwzzh.png)
 
 - Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
 - Support create link URL from QR code
@@ -7,19 +7,41 @@
 ## Table of Contents
 
   - [Features](#features)
-  - [Installing](#installing)
+  - [Choose what you need](#choose-what-you-need)
+  - [Try It!](#try-it)
+  - [Demo preview](#demo-preview)
+  - [Installation](#installing)
   - [Example](#example)
   - [Vietqr API](#vietqr-api)
+  - [License](#license)
 
 ## Features
 - Support draw QR code from data bank ( accountName, amount, memo,....) with many templates 
 - Support create link URL from QR code
 
-## Installing
-Using npm :
-```bash
-  npm i vietqr
-```
+## Choose what you need
+
+| Project | Support |
+| --- | --- |
+| [VietQR](https://github.com/vietqr/vietqr-node) | Running with DOM on CLIENT-SIDE: Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.), Electron, NW.js, ETC. Running without DOM on SERVER-SIDE: Save image to file(PNG/JPEG/Base64) or get data url text.  NodeJS, Electron, NW.js, ETC. A QRCode generator for React Native: Generate QRCode image or get base64 data url text.|
+## Try It!
+
+[Try It!](http://my.vietqr.io/ "Easy To Try It!")
+
+## Demo preview
+
+![Demo preview](https://res.cloudinary.com/taskmanagereaglob123/image/upload/v1641971750/photo_2022-01-12_14.15.13_ozxy6g.jpg)
+
+## Installation
+- Download install
+
+    [https://github.com/vietqr/vietqr-node](https://github.com/vietqr/vietqr-node)
+
+- Npm install
+
+	```BASH
+	npm install vietqr
+	```
 ## Example
 
 ```javascript
@@ -27,42 +49,49 @@ import {VietQRClient} from 'vietqr';
 
 
 let VietQR = new VietQRClient({
-    x_api_key: '1',
-    x_client_key: '1',
-})
+    x_api_key: 'de8a0804-a76d-41e5-8ad6-31503ce7d5f4',
+    x_client_key: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
+});
 
 // list banks are supported create QR code by Vietqr
-let banks = await VietQR.getBanks()
+let banks = await VietQR.getBanks();
 
 // list templates are supported by Vietqr
-let templates = await VietQR.getTemplate()
+let templates = await VietQR.getTemplate();
 
 
-// create QR code from data v1
-let qrCode = await VietQR.genQRCodeSyncV1({
+// create QR code from data
+let qrCode = await VietQR.genQRCodeSync({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-})
-
-// create QR code from data v2
-let qrCode = await VietQR.genQRCodeSyncV2({
-    bank: '970415',
-    accountName: 'QUY VAC XIN PHONG CHONG COVID',
-    accountNumber: '113366668888',
-    amount: '79000',
-    memo: 'Ung Ho Quy Vac Xin',
-})
+    template: 'vietqr_net_2'
+});
 
 ```
+
+
 ## Vietqr API
+
+| Option | Description | 
+| --- | --- |
+| **bank** | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
+| **accountName** | Bank account name |
+| **accountNumber** | Bank account number |
+| **amount** | Amount of money |
+| **memo** | Money transfer content |
+| **template** | Type of template returned to the user |
+| **x_api_key** | api_key is provided when registering an account at http://my.vietqr.io/ (The function is under development. No need now)|
+| **x_client_key** | client_key is provided when registering an account at http://my.vietqr.io/ (The function is under development. No need now)|
+
+
 ### getTemplate()
 ```javascript
-let templates = await VietQR.getTemplate()
+let templates = await VietQR.getTemplate();
 ```
-#### JSON res
+#### Response successfully
 ```javascript
  {
   code: '00',
@@ -89,9 +118,9 @@ let templates = await VietQR.getTemplate()
 
 ### getBanks()
 ```javascript
-let banks = await VietQR.getBanks()
+let banks = await VietQR.getBanks();
 ```
-#### JSON res
+#### Response successfully
 ```javascript
 {
   code: '00',
@@ -107,7 +136,8 @@ let banks = await VietQR.getBanks()
       logo: 'https://api.vietqr.io/img/ICB.3d4d6760.png',
       support: 3
     },
-    ...........
+    ....
+  ]
 }
 ```
 
@@ -120,31 +150,23 @@ let quickLink = VietQR.genQuickLink({
         accountNumber: '113366668888',
         amount: '79000',
         memo: 'Ung Ho Quy Vac Xin',
-        template: 'compact', //option
-        media: '.jpg' //option
-    })
+        template: 'compact', 
+        media: '.jpg' 
+    });
 ```
 
-### genQRCodeSyncV1() / genQRCodeSyncV2()
+### genQRCodeSync()
 ```javascript
-let qrCode = await VietQR.genQRCodeSyncV1({
+let qrCode = await VietQR.genQRCodeSync({
     bank: '970415',
     accountName: 'QUY VAC XIN PHONG CHONG COVID',
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-    format : 'qr_only' //option
-})
-let qrCode = await VietQR.genQRCodeSyncV2({
-    bank: '970415',
-    accountName: 'QUY VAC XIN PHONG CHONG COVID',
-    accountNumber: '113366668888',
-    amount: '79000',
-    memo: 'Ung Ho Quy Vac Xin',
-    template : 'qr_only' // option
-})
+    template : 'qr_only'
+});
 ```
-#### JSON res
+#### Response successfully
 ```javascript
 {
     "code": "00",
@@ -152,9 +174,11 @@ let qrCode = await VietQR.genQRCodeSyncV2({
     "data": {
         "acqId": "970415",
         "accountName": "QUY VAC XIN PHONG CHONG COVID",
-        "qrDataURL": "data:image/png;base64,QRCODE_BASE_64_HERE"
+        "qrDataURL": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOwAAADeCAYAAAA..."
     }
 }
 ```
-- Copy field qrDataURL paste on browser to looking image QR :
-![image](https://user-images.githubusercontent.com/66076345/147755844-fccb1738-eb75-4e23-bc6f-d4fc2a9c78e2.png)
+
+
+## License
+ISC License
