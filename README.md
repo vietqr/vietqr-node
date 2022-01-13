@@ -148,7 +148,7 @@ vietQR.getBanks().then((data)=>{console.log(data)})
 
 ### genQuickLink()
 ```javascript
-vietQR.genQuickLink({
+let link = vietQR.genQuickLink({
         bank: '970415',
         accountName: 'QUY VAC XIN PHONG CHONG COVID',
         accountNumber: '113366668888',
@@ -156,8 +156,8 @@ vietQR.genQuickLink({
         memo: 'Ung Ho Quy Vac Xin',
         template: 'compact', 
         media: '.jpg' 
-    }).then((data)=>{console.log(data)})
-.catch((err)=>{});
+    });
+console.log(link);
 ```
 
 ### genQRCodeBase64()

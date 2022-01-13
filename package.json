@@ -1,6 +1,6 @@
 {
   "name": "vietqr",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Support draw QR code from data bank ( accountName, amount, memo,....) with many templates, create link URL from QR code",
   "main": "index.js",
   "scripts": {
