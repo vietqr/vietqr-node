@@ -91,7 +91,7 @@ let qrCode = await VietQR.genQRCodeSync({
 ```javascript
 let templates = await VietQR.getTemplate();
 ```
-#### Response successful
+#### Response successfully
 ```javascript
  {
   code: '00',
@@ -120,7 +120,7 @@ let templates = await VietQR.getTemplate();
 ```javascript
 let banks = await VietQR.getBanks();
 ```
-#### Response successful
+#### Response successfully
 ```javascript
 {
   code: '00',
@@ -166,7 +166,7 @@ let qrCode = await VietQR.genQRCodeSync({
     template : 'qr_only'
 });
 ```
-#### Response successful
+#### Response successfully
 ```javascript
 {
     "code": "00",
@@ -181,4 +181,4 @@ let qrCode = await VietQR.genQRCodeSync({
 
 
 ## License
-MIT License
+ISC License
