@@ -76,11 +76,11 @@ vietQR.genQRCodeBase64({
 ```
 
 
-## Vietqr API
+## VietQR API
 
 | Option | Description | 
 | --- | --- |
-| **bank** | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
+| **bank** | Get the bin field corresponding to the data returned in the banks API (VietQR.getTemplate() or [API Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
 | **accountName** | Bank account name |
 | **accountNumber** | Bank account number |
 | **amount** | Amount of money |
@@ -187,4 +187,4 @@ vietQR.genQRCodeBase64({
 
 
 ## License
-ISC License
+MIT License
