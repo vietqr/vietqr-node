@@ -23,7 +23,7 @@
 
 | Project | Support |
 | --- | --- |
-| [VietQR](https://github.com/vietqr/vietqr-node) | Running with DOM on CLIENT-SIDE: Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.), Electron, NW.js, ETC. Running without DOM on SERVER-SIDE: Save image to file(PNG/JPEG/Base64) or get data url text.  NodeJS, Electron, NW.js, ETC. A QRCode generator for React Native: Generate QRCode image or get base64 data url text.|
+| [VietQR](https://github.com/vietqr/vietqr-node) | - Running with DOM on CLIENT-SIDE: Browser(IE6+, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, etc.), Electron, NW.js, etc. <br/>- Running without DOM on SERVER-SIDE: Save image to file(PNG/JPEG/Base64) or get data url text.  NodeJS, Electron, NW.js, etc. <br/>- A QRCode generator for React Native: Generate QRCode image or get base64 data url text.|
 ## Try It!
 
 [Try It!](http://my.vietqr.io/ "Easy To Try It!")
@@ -76,11 +76,11 @@ vietQR.genQRCodeBase64({
 ```
 
 
-## Vietqr API
+## VietQR API
 
 | Option | Description | 
 | --- | --- |
-| **bank** | Get the bin1 field corresponding to the data returned in the banks api (VietQR.getTemplate() or [api Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
+| **bank** | Get the bin field corresponding to the data returned in the banks API (VietQR.getTemplate() or [API Bank](https://www.vietqr.io/danh-sach-api/api-tao-ma-qr/api-danh-sach-ma-ngan-hang)) |
 | **accountName** | Bank account name |
 | **accountNumber** | Bank account number |
 | **amount** | Amount of money |
@@ -187,4 +187,4 @@ vietQR.genQRCodeBase64({
 
 
 ## License
-ISC License
+MIT License
