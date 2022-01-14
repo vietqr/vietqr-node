@@ -50,7 +50,7 @@ import {VietQR} from 'vietqr';
 
 let vietQR = new VietQR({
     clientID: 'de8a0804-a76d-41e5-8ad6-31503ce7d5f4',
-    clientSecret: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
+    apiKey: '17c29f09-4ea2-4417-b9c2-7f020d35de42',
 });
 
 // list banks are supported create QR code by Vietqr
@@ -87,7 +87,7 @@ vietQR.genQRCodeBase64({
 | **memo** | Money transfer content |
 | **template** | Type of template returned to the user |
 | **clientID** | api_key is provided when registering an account at http://my.vietqr.io/ 
-| **clientSecret** | client_key is provided when registering an account at http://my.vietqr.io/ 
+| **apiKey** | client_key is provided when registering an account at http://my.vietqr.io/ 
 
 ### getTemplate()
 ```javascript
