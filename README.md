@@ -69,7 +69,7 @@ vietQR.genQRCodeBase64({
     accountNumber: '113366668888',
     amount: '79000',
     memo: 'Ung Ho Quy Vac Xin',
-    template: 'vietqr_net_2'
+    template: 'compact'
 }).then((data)=>{console.log(data)})
 .catch((err)=>{});
 
@@ -108,7 +108,7 @@ vietQR.getTemplate().then((data)=>{console.log(data)})
     {
       name: 'Compact',
       template: 'compact',
-      demo: 'https://api.vietqr.io/Vietinbank/113366668888/790000/Gop%20Quy/vietqr_net_2.jpg?accountName=Quy%20Vacxin%20Covid'
+      demo: 'https://api.vietqr.io/Vietinbank/113366668888/790000/Gop%20Quy/compact.jpg?accountName=Quy%20Vacxin%20Covid'
     },
     {
       name: 'Compact 2',
