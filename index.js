@@ -1,5 +1,5 @@
-let axios = require("axios");
-class VietQR {
+// let axios = require("axios");
+export class VietQR {
     constructor({
         clientID = '',
         apiKey = '',
@@ -89,7 +89,7 @@ class VietQR {
         media = ''
     }) {
         if (this.checkKey()) {
-            let url = media == '.jpg' ?
+            const url = media == '.jpg' ?
                 encodeURI(`${this.apiUrl}/${bank}/${accountNumber}/${amount}/${(memo)}/${template}.jpg?accountName=${accountName}`).replace(/%20/g, "+")
                 :
                 encodeURI(`${this.apiUrl}/${bank}/${accountNumber}/${amount}/${memo}/${template}.png?accountName=${accountName}`).replace(/%20/g, "+");
@@ -97,7 +97,7 @@ class VietQR {
         }
         this.sendMessage(this.checkKey());
     }
-    createPaymentGateway({ theme_slug,
+    async createPaymentGateway({ theme_slug,
         platform = '',
         bankId = '',
         accountName = '',
@@ -106,7 +106,7 @@ class VietQR {
         amount = '',
     }) {
         if (this.checkKey()) {
-            let entity = {
+            const entity = {
                 apiKey: this.clientID,
                 clientId: this.apiKey,
                 theme_slug: theme_slug
@@ -125,25 +125,44 @@ class VietQR {
 }
 
 async function getData(url) {
-    return await axios.get(url)
-        .then(data => {
-            return data.data
-        })
-        .catch(err => {
-            console.log(err);
-            return err
-        })
+    // return await axios.get(url)
+    //     .then(data => {
+    //         return data.data
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //         return err
+    //     })
+    return await fetch(url)
+    .then(
+        data => data.json()
+    )
+    .catch((err)=>{
+        console.log(err)
+        return err
+    })
 }
 
 async function postData(url, data) {
-    return await axios.post(url, data)
-        .then(data => {
-            // console.log(data);
-            return data
-        })
-        .catch(err => {
-            console.log(err);
-            return err
-        })
+    // return await axios.post(url, data)
+    //     .then(data => {
+    //         // console.log(data);
+    //         return data
+    //     })
+    //     .catch(err => {
+    //         console.log(err);
+    //         return err
+    //     })
+    return await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(data)
+    })
+    .then(
+        data => data.json()
+    )
+    .catch((err)=>{
+        console.log(err)
+        return err
+    })
 }
-module.exports.VietQR = VietQR
+// module.exports.VietQR = VietQR

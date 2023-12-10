@@ -3,6 +3,8 @@
   "version": "1.1.6",
   "description": "Support draw QR code from data bank ( accountName, amount, memo,....) with many templates, create link URL from QR code",
   "main": "index.js",
+  "types": "index.d.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node index.js"
@@ -22,9 +24,5 @@
   "bugs": {
     "url": "https://github.com/vietqr/vietqr-node/issues"
   },
-  "homepage": "https://github.com/vietqr/vietqr-node",
-  "devDependencies": {},
-  "dependencies": {
-    "axios": "^0.24.0"
-  }
+  "homepage": "https://github.com/vietqr/vietqr-node"
 }
