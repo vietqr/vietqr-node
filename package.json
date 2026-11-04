@@ -9,20 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vietqr/vietqr-node.git"
+    "url": "git+https://github.com/vietqr/vietqr-node.git"
   },
   "keywords": [
-    "Vietqr",
-    "Napas",
-    "Casso",
-    "Template"
+    "vietqr",
+    "napas",
+    "napas247",
+    "qr",
+    "qrcode",
+    "emvco",
+    "payment",
+    "quicklink",
+    "casso"
   ],
   "author": "Casso",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vietqr/vietqr-node/issues"
-  },
-  "homepage": "https://github.com/vietqr/vietqr-node",
   "dependencies": {
     "jpeg-js": "^0.4.4"
   },
@@ -33,15 +34,10 @@
   "files": [
     "index.js",
     "lib",
-    "README.md",
     "README.en.md",
-    "CHANGELOG.md",
-    "LICENSE"
+    "CHANGELOG.md"
   ],
   "browser": {
-    "./lib/platform.js": "./lib/platform.browser.js",
-    "jpeg-js": false,
-    "zlib": false,
-    "https": false
+    "./lib/platform.js": "./lib/platform.browser.js"
   }
 }
