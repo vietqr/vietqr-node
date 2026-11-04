@@ -1,11 +1,11 @@
 {
   "name": "vietqr",
-  "version": "1.1.6",
-  "description": "Support draw QR code from data bank ( accountName, amount, memo,....) with many templates, create link URL from QR code",
+  "version": "1.2.0",
+  "description": "Generate VietQR (NAPAS 247) payment QR codes offline (payload text and plain QR images as PNG, JPG or SVG) and build img.vietqr.io Quick Links for template images.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node index.js"
+    "test": "node --test test/",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
@@ -23,8 +23,25 @@
     "url": "https://github.com/vietqr/vietqr-node/issues"
   },
   "homepage": "https://github.com/vietqr/vietqr-node",
-  "devDependencies": {},
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "jpeg-js": "^0.4.4"
+  },
+  "devDependencies": {
+    "jsqr": "^1.4.0",
+    "pngjs": "^7.0.0"
+  },
+  "files": [
+    "index.js",
+    "lib",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "browser": {
+    "./lib/platform.js": "./lib/platform.browser.js",
+    "jpeg-js": false,
+    "zlib": false
   }
 }
