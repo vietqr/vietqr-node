@@ -11,7 +11,7 @@ Thư viện Node.js tạo mã QR chuyển khoản VietQR (NAPAS 247) từ thông
 > Ảnh QR theo mẫu (`compact`, `compact2`, `print`, ...) chỉ có online, qua link [`genQuickLink()`](#genquicklink).
 > **Code cũ không phải sửa**: hàm vẫn trả về đúng object như trước (`res.data.code`, `res.data.data.qrDataURL`, ...).
 > `getTemplate()` cũng chạy offline, không cần API key nữa, `createPaymentGateway()` đã ngừng. Chỉ còn `getBanks()`
-> gọi API. Xem [Tạo QR offline](#tạo-qr-offline).
+> gọi API (lỗi thì trả danh sách offline). Xem [Tạo QR offline](#tạo-qr-offline).
 
 ## Mục lục
 
@@ -195,7 +195,8 @@ Chạy offline (không gọi mạng): trả về các theme gốc trong [tài li
 
 ## getBanks()
 
-Hàm duy nhất còn gọi API (`https://api.vietqr.io/v2/banks`).
+Hàm duy nhất còn gọi API (`https://api.vietqr.io/v2/banks`) để lấy danh sách mới nhất. Nếu không gọi được
+(mất mạng, quá 10 giây, API lỗi), hàm trả danh sách offline có sẵn trong thư viện, cùng định dạng, và in cảnh báo một lần.
 
 ```javascript
 vietQR.getBanks().then((data) => { console.log(data) })

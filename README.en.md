@@ -11,7 +11,7 @@ Node.js library that creates VietQR (NAPAS 247) bank transfer QR codes from acco
 > Template images (`compact`, `compact2`, `print`, ...) are online only, through [`genQuickLink()`](#genquicklink) links.
 > **Existing code does not change**: the methods return the same object as before (`res.data.code`,
 > `res.data.data.qrDataURL`, ...). `getTemplate()` is offline too, API keys are no longer needed, and
-> `createPaymentGateway()` is retired. Only `getBanks()` still calls the API. See [Offline generation](#offline-generation).
+> `createPaymentGateway()` is retired. Only `getBanks()` still calls the API (with an offline fallback). See [Offline generation](#offline-generation).
 
 ## Table of Contents
 
@@ -195,7 +195,9 @@ Offline (no request): returns the root themes from the [Quick Link docs](https:/
 
 ## getBanks()
 
-The only method that still calls the API (`https://api.vietqr.io/v2/banks`).
+The only method that still calls the API (`https://api.vietqr.io/v2/banks`), to get the latest list. When the API
+cannot be reached (network error, 10-second timeout, error response), it returns the offline list shipped with the
+library, in the same shape, with a one-time warning.
 
 ```javascript
 vietQR.getBanks().then((data) => { console.log(data) })

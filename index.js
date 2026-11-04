@@ -41,8 +41,21 @@ class VietQR {
         return { code: '00', desc: 'success', data: TEMPLATES.map((t) => Object.assign({}, t)) };
     }
 
+    // Live list from the API; when it cannot be reached (network error, timeout, bad response)
+    // the snapshot shipped with the package is returned in the same shape.
     async getBanks() {
-        return await getData(`${this.apiUrl}/v2/banks`);
+        try {
+            const res = await getJSON(`${this.apiUrl}/v2/banks`);
+            if (res && res.code === '00' && Array.isArray(res.data)) return res;
+            throw new Error(`unexpected response${res && res.code ? ` (code ${res.code})` : ''}`);
+        } catch (err) {
+            warnOnce('banks', `getBanks(): ${this.apiUrl}/v2/banks failed (${err.message}), returning the offline bank list.`);
+            return {
+                code: '00',
+                desc: `Get Bank list successful! Total ${BANKS.length} banks`,
+                data: BANKS.map((bank) => Object.assign({}, bank)),
+            };
+        }
     }
 
     // Generated offline (no request to /v2/generate) as a plain QR code; template images come from genQuickLink().
@@ -112,15 +125,6 @@ class VietQR {
         warnOnce('gateway', 'createPaymentGateway() is no longer supported: the VietQR payment gateway has been retired. It now resolves to an Error without making a request.');
         return err
     }
-}
-
-// Like the axios call of earlier versions: resolves to the JSON body, or logs and resolves to the error.
-async function getData(url) {
-    return await getJSON(url)
-        .catch(err => {
-            console.log(err);
-            return err
-        })
 }
 
 async function generateResponse(body) {

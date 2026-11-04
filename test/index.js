@@ -194,6 +194,19 @@ describe('no API keys, no template / gateway API', () => {
         assert.ok(res instanceof Error);
     });
 
+    it('getBanks falls back to the offline list when the API is unreachable', async () => {
+        const vietQR = new VietQR();
+        vietQR.apiUrl = 'https://127.0.0.1:9';
+        const res = await vietQR.getBanks();
+        assert.equal(res.code, '00');
+        assert.equal(res.desc, `Get Bank list successful! Total ${res.data.length} banks`);
+        const icb = res.data.find((b) => b.code === 'ICB');
+        assert.equal(icb.bin, '970415');
+        assert.ok(icb.shortName && icb.logo && 'transferSupported' in icb);
+        icb.bin = 'changed';
+        assert.equal(findBank('ICB').bin, '970415');
+    });
+
     it('genQuickLink no longer needs keys', () => {
         assert.match(new VietQR().genQuickLink(SAMPLE), /^https:\/\/img\.vietqr\.io\/image\/970415-/);
     });
