@@ -196,7 +196,7 @@ Chạy offline (không gọi mạng): trả về các theme gốc trong [tài li
 ## getBanks()
 
 Hàm duy nhất còn gọi API (`https://api.vietqr.io/v2/banks`) để lấy danh sách mới nhất. Nếu không gọi được
-(mất mạng, quá 10 giây, API lỗi), hàm trả danh sách offline có sẵn trong thư viện, cùng định dạng, và in cảnh báo một lần.
+(mất mạng, quá 2 giây, API lỗi), hàm trả danh sách offline có sẵn trong thư viện, cùng định dạng, và in cảnh báo một lần.
 
 ```javascript
 vietQR.getBanks().then((data) => { console.log(data) })

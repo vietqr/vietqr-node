@@ -196,7 +196,7 @@ Offline (no request): returns the root themes from the [Quick Link docs](https:/
 ## getBanks()
 
 The only method that still calls the API (`https://api.vietqr.io/v2/banks`), to get the latest list. When the API
-cannot be reached (network error, 10-second timeout, error response), it returns the offline list shipped with the
+cannot be reached (network error, 2-second timeout, error response), it returns the offline list shipped with the
 library, in the same shape, with a one-time warning.
 
 ```javascript

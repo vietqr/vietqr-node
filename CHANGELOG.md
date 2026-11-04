@@ -13,7 +13,7 @@ Drop-in upgrade from 1.1.x: existing code keeps working, retired features only p
   (img.vietqr.io serves them as SVG).
 - API keys are no longer needed: `clientID` / `apiKey` are accepted and ignored (warning).
 - `createPaymentGateway()` is retired: no request, resolves to an `Error` (warning).
-- `getBanks()` still calls `https://api.vietqr.io/v2/banks`; when that fails (network error, 10 s timeout, error
+- `getBanks()` still calls `https://api.vietqr.io/v2/banks`; when that fails (network error, 2 s timeout, error
   response) it returns the bank list shipped with the package, in the same shape (warning).
 - New exports: `generateQR`, `genQRText`, `BANKS`, `findBank`.
 - Dependencies: `axios` removed (`getBanks()` uses Node.js `https` / browser `fetch`); `jpeg-js` (pure JavaScript) added for JPG output.
