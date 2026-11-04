@@ -267,10 +267,10 @@ Chi tiết xem [CHANGELOG](CHANGELOG.md).
 
 Thư viện viết bằng JavaScript thuần, không có module native, không cần compile.
 
-**Node.js:** PNG nén bằng `zlib` có sẵn, JPG dùng [`jpeg-js`](https://github.com/jpeg-js/jpeg-js).
+**Node.js:** PNG nén bằng `zlib` có sẵn, JPG dùng [`jpeg-js`](https://github.com/jpeg-js/jpeg-js), `getBanks()` gọi bằng `https` có sẵn (không dùng axios nữa).
 
 **Trình duyệt** (Angular, React, ...): bundler sẽ dùng `lib/platform.browser.js`. PNG và SVG tạo bằng JavaScript,
-JPG vẽ qua `<canvas>`; nơi không có canvas (web worker, ...) thì trả PNG.
+JPG vẽ qua `<canvas>`; nơi không có canvas (web worker, ...) thì trả PNG. `getBanks()` dùng `fetch`.
 
 ## License
 

@@ -15,4 +15,4 @@ Drop-in upgrade from 1.1.x: existing code keeps working, retired features only p
 - `createPaymentGateway()` is retired: no request, resolves to an `Error` (warning).
 - `getBanks()` still calls `https://api.vietqr.io/v2/banks`.
 - New exports: `generateQR`, `genQRText`, `BANKS`, `findBank`.
-- New dependency: `jpeg-js` (pure JavaScript) for JPG output.
+- Dependencies: `axios` removed (`getBanks()` uses Node.js `https` / browser `fetch`); `jpeg-js` (pure JavaScript) added for JPG output.

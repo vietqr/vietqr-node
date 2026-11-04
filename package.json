@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/vietqr/vietqr-node",
   "dependencies": {
-    "axios": "^0.24.0",
     "jpeg-js": "^0.4.4"
   },
   "devDependencies": {
@@ -42,6 +41,7 @@
   "browser": {
     "./lib/platform.js": "./lib/platform.browser.js",
     "jpeg-js": false,
-    "zlib": false
+    "zlib": false,
+    "https": false
   }
 }

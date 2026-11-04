@@ -268,10 +268,10 @@ See the [CHANGELOG](CHANGELOG.md) for details.
 
 Pure JavaScript: no native modules, nothing to compile.
 
-**Node.js:** PNG is compressed with the built-in `zlib`, JPG uses [`jpeg-js`](https://github.com/jpeg-js/jpeg-js).
+**Node.js:** PNG is compressed with the built-in `zlib`, JPG uses [`jpeg-js`](https://github.com/jpeg-js/jpeg-js), `getBanks()` uses the built-in `https` (no axios any more).
 
 **Browsers** (Angular, React, ...): bundlers use `lib/platform.browser.js`. PNG and SVG are built in JavaScript,
-JPG goes through a `<canvas>`; where there is no canvas (web workers, ...) a PNG is returned.
+JPG goes through a `<canvas>`; where there is no canvas (web workers, ...) a PNG is returned. `getBanks()` uses `fetch`.
 
 ## License
 

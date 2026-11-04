@@ -1,8 +1,8 @@
-let axios = require("axios");
 const { generate } = require("./lib/generate");
 const { genQRText } = require("./lib/payload");
 const { BANKS, findBank } = require("./lib/banks");
 const { warnOnce } = require("./lib/warn");
+const { getJSON } = require("./lib/platform");
 // Root themes and Quick Link syntax from https://www.vietqr.io/qr-dong.md
 const QUICK_LINK = 'https://img.vietqr.io/image';
 const DEMO_QUERY = 'amount=790000&addInfo=dong%20qop%20quy%20vac%20xin&accountName=Quy%20Vac%20Xin%20Covid';
@@ -114,11 +114,9 @@ class VietQR {
     }
 }
 
+// Like the axios call of earlier versions: resolves to the JSON body, or logs and resolves to the error.
 async function getData(url) {
-    return await axios.get(url)
-        .then(data => {
-            return data.data
-        })
+    return await getJSON(url)
         .catch(err => {
             console.log(err);
             return err
